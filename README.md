@@ -22,8 +22,8 @@ Built on a double Micro850 PLC + double Raspberry Pi 5 architecture, orchestrate
 [Cell] [Cell] [Cell] ...
 ```
 
-- **PLC (Micro850 @ 192.168.8.50)** — deterministic, safety-critical control
-- **Raspberry Pi 5 (@ 192.168.8.60)** — non-deterministic decisions, vision, AI, orchestration
+- **PLC A (Micro850 @ 192.168.8.50 ) + PLC B (Micro850 @ TBD) ** — deterministic, safety-critical control
+- **Raspberry Pi 5 A (@ 192.168.8.60) + Raspberry Pi B (@ TBD)** — non-deterministic decisions, vision, AI, orchestration
 - **MQTT** — orchestration backbone; all cells subscribe/publish to a shared broker
 - **Node-RED** — dashboard, flow logic, HMI
 - **OT LAN** — air-gapped network via GL.iNet Opal router
@@ -37,7 +37,7 @@ See [`docs/architecture.md`](docs/architecture.md) for the full system design.
 | Cell | Description | Status |
 |------|-------------|--------|
 | [`cells/conveyor/`](cells/conveyor/) | Belt conveyor  |  In Progress |
-| [`cells/wheel/`](cells/wheel/) | Physical spinning wheel   |  In Progress |
+| [`cells/wheel/`](cells/wheel/) | Physical spinning wheel  |  In Progress |
 | [`cells/hopper/`](cells/hopper/) | Rotary hopper — part/material dispenser |  In Progress |
 
 > MVP target: all three cells communicating over MQTT with a working dispatch loop.
